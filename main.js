@@ -5,7 +5,7 @@ var mainState = {
       game.load.audio('jump', 'assets/jump.wav');
   },
   create: function() {
-      game.state.backgroundColor = "#71c5cf";
+      game.stage.backgroundColor = "#4488AA";
 
       game.physics.startSystem(Phaser.Physics.ARCADE);
 
