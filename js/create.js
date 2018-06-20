@@ -26,6 +26,7 @@ function create() {
   player.setBounce(0.2);
   player.setCollideWorldBounds(true);
   player.body.gravity.y = 500;
+
   this.anims.create({
       key: 'left',
       frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
@@ -63,7 +64,7 @@ function collectStar(player, star) {
   star.disableBody(true, true);
   score += 10;
   scoreText.setText('score:' + score);
-
+  player.body.acceleration.x++;
   if (stars.countActive(true) === 0) {
     stars.children.iterate(function (child) {
       child.enableBody(true, child.x, 0, true, true);

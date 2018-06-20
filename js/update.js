@@ -3,10 +3,10 @@
 function update() {
   // Move player left and right
   if (cursors.left.isDown) {
-    player.setVelocityX(-160);
+    player.setVelocityX(-(160 + player.body.acceleration.x * 5));
     player.anims.play('left', true);
   } else if (cursors.right.isDown) {
-    player.setVelocityX(160);
+    player.setVelocityX(160 + player.body.acceleration.x * 5);
     player.anims.play('right', true);
   } else {
     player.setVelocityX(0);
